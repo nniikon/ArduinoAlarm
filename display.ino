@@ -1,9 +1,9 @@
 #include "display.h"
 
-#include <LCDI2C_Generic.h>
+#include <LCDI2C_Russian.h>
 
 namespace {
-    LCDI2C_Generic lcd(0x27, 16, 2);
+    LCDI2C_Russian lcd(0x27, 16, 2);
 }
 
 void my::Display::Setup() {
@@ -12,7 +12,7 @@ void my::Display::Setup() {
 }
 
 void my::Display::Print(const char* str) {
-    lcd.print(str);
+    lcd.println(str);
 }
 
 void my::Display::Clear() {
